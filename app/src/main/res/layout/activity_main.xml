@@ -1,0 +1,44 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <com.jjoe64.graphview.GraphView
+        android:layout_width="match_parent"
+        android:layout_height="200dip"
+        android:id="@+id/graph" />
+    <RelativeLayout
+        android:id="@+id/explain"
+        android:layout_below="@id/graph"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activity_vertical_margin">
+        <TextView
+            android:id="@+id/txtLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Light"/>
+        <ImageView
+            android:layout_toRightOf="@+id/txtLight"
+            android:layout_marginLeft="10dp"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:background="@android:color/holo_blue_dark"/>
+        <TextView
+            android:id="@+id/txtTemp"
+            android:layout_below="@+id/txtLight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Temp"/>
+        <ImageView
+            android:layout_below="@+id/txtLight"
+            android:layout_toRightOf="@+id/txtTemp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="20dp"
+            android:layout_height="15dp"
+            android:background="@android:color/holo_green_light"/>
+    </RelativeLayout>
+
+</RelativeLayout>
